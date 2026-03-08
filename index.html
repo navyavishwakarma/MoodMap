@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodMap — Smart Nearby Places</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:wght@700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">MoodMap</span>
+        </div>
+        <p class="header-sub">Tell us your vibe. We'll find your place.</p>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- STEP 1: LOCATION -->
+      <section class="section" id="location-section">
+        <div class="section-label">01 — Location</div>
+        <h2 class="section-title">Where are you?</h2>
+        <div class="location-controls">
+          <button class="btn btn-locate" id="findLocationBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+            Use My Location
+          </button>
+          <div class="divider"><span>or</span></div>
+          <div class="search-row">
+            <input type="text" id="locationInput" class="input" placeholder="Search a city or area…" autocomplete="off" />
+            <button class="btn btn-search" id="searchBtn">Search</button>
+          </div>
+        </div>
+        <p class="status-msg" id="locationStatus"></p>
+      </section>
+
+      <!-- MAP -->
+      <section class="map-section" id="map-section" style="display:none;">
+        <div id="map"></div>
+      </section>
+
+      <!-- STEP 2: MOOD -->
+      <section class="section" id="mood-section" style="display:none;">
+        <div class="section-label">02 — Mood</div>
+        <h2 class="section-title">What's the vibe?</h2>
+        <div class="mood-grid">
+          <button class="mood-card" data-mood="work">
+            <span class="mood-icon">💼</span>
+            <span class="mood-name">Work / Study</span>
+            <span class="mood-desc">Cafes, quiet spots, coworking</span>
+          </button>
+          <button class="mood-card" data-mood="date">
+            <span class="mood-icon">💑</span>
+            <span class="mood-name">Date Night</span>
+            <span class="mood-desc">Romantic restaurants & bars</span>
+          </button>
+          <button class="mood-card" data-mood="quick">
+            <span class="mood-icon">⚡</span>
+            <span class="mood-name">Quick Bite</span>
+            <span class="mood-desc">Fast food, takeaway, snacks</span>
+          </button>
+          <button class="mood-card" data-mood="budget">
+            <span class="mood-icon">💸</span>
+            <span class="mood-name">Budget Friendly</span>
+            <span class="mood-desc">Great food, easy on the wallet</span>
+          </button>
+          <button class="mood-card" data-mood="social">
+            <span class="mood-icon">🎉</span>
+            <span class="mood-name">Friends & Family</span>
+            <span class="mood-desc">Lively spots for groups</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 3: RESULTS -->
+      <section class="section" id="results-section" style="display:none;">
+        <div class="section-label">03 — Results</div>
+        <div class="results-header">
+          <h2 class="section-title" id="resultsTitle">Places for you</h2>
+          <button class="btn-ghost" id="changeMoodBtn">← Change mood</button>
+        </div>
+        <div class="places-list" id="placesList"></div>
+        <p class="status-msg" id="resultsStatus"></p>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>MoodMap · Powered by Google Places</p>
+    </footer>
+  </div>
+
+  <!-- PLACE DETAIL MODAL -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none;">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsu0Nk-gSRdMPpQ4WJjk7aNsD2qTTuMwU&libraries=places,geometry&callback=initMap"
+    async defer>
+</script>
+</body>
+</html>
