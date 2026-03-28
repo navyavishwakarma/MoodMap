@@ -1,6 +1,6 @@
-# 🗺️ MoodMap — Smart Nearby Places Recommender
+# 🗺️ MoodMap - Smart Nearby Places Recommender
 
-A clean, modern web app that recommends nearby places based on your **current mood**. Tell it how you're feeling and it finds the perfect spot for you — with real-time ratings, distance, open/closed status, and directions.
+A clean and modern web app that recommends nearby places based on your **current mood**. Tell it how you're feeling and it finds the perfect spot for you with real-time ratings, distance, open/closed status and directions.
 
 🔗 **Live Demo:** https://candid-begonia-ce0df3.netlify.app
 
@@ -8,27 +8,26 @@ A clean, modern web app that recommends nearby places based on your **current mo
 
 ## 📌 Overview
 
-MoodMap uses your location (GPS or manual search) and your current mood to find the best nearby places. Whether you're looking for a quiet cafe to work in, a romantic restaurant for date night, or a budget-friendly quick bite — MoodMap has you covered.
+MoodMap uses your location (GPS or manual search) and your current mood to find the best nearby places. Whether you're looking for a quiet cafe to work in, a romantic restaurant for date night or a budget-friendly quick bite, MoodMap has you covered.
 
 ---
 
 ## ✨ Features
 
 - 📍 **Live location detection** via GPS or manual search
-- 🎭 **5 mood categories** — Work/Study, Date Night, Quick Bite, Budget Friendly, Friends & Family
+- 🎭 **5 mood categories** - Work/Study, Date Night, Quick Bite, Budget Friendly Friends & Family
 - 🗺️ **Interactive Google Map** with place markers
-- ⭐ **Real-time place data** — ratings, open/closed status, price level, distance
+- ⭐ **Real-time place data** - ratings, open/closed status, price level, distance
 - 🧭 **One-click directions** via Google Maps
-- 📱 **Fully responsive** — works on mobile and desktop
+- 📱 **Fully responsive** - works on mobile and desktop
 - ⚡ **Skeleton loading** animations for smooth UX
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** HTML, CSS, Vanilla JavaScript
+- **Frontend:** HTML, CSS, JavaScript
 - **APIs:** Google Maps JavaScript API, Google Places API, Google Geocoding API
-- **Fonts:** Fraunces, DM Sans (Google Fonts)
 - **Deployment:** Netlify
 
 ---
@@ -47,10 +46,10 @@ MoodMap/
 
 ## 🚀 How to Use
 
-1. **Set your location** — click "Use My Location" or search for any area
-2. **Pick your mood** — choose from 5 mood categories
-3. **Browse results** — see nearby places with ratings, distance & hours
-4. **Get directions** — click any place for details and Google Maps directions
+1. **Set your location** - click "Use My Location" or search for any area
+2. **Pick your mood** - choose from 5 mood categories
+3. **Browse results** - see nearby places with ratings, distance & hours
+4. **Get directions** - click any place for details and Google Maps directions
 
 ---
 
